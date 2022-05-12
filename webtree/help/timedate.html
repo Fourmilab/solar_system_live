@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+Solar System Live Help: Time and Date
+</title>
+<link rel="stylesheet" href="../solar.css" type="text/css" />
+<meta name="keywords" content="solar, system, live, help, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live Help: Time and Date" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+<h1><img src="images/helplogo.png" height="64" width="64" align="middle" alt="" /> &nbsp; Solar System Live Help</h1>
+<hr />
+<h2>Time and Date</h2>
+<form method="post" action="/cgi-bin/Solar">
+<center>
+<b>Time:</b><label><input type="radio" name="date" value="0" checked="checked" /> Now</label>
+<label><input type="radio" name="date" value="1" /> UTC:</label>
+<input type="text" name="utc" value="1993/09/17 22:00" size="20" />
+<label><input type="radio" name="date" value="2" /> Julian:</label>
+<input type="text" name="jd" value="1719286.5" size="15" />
+<br />
+<input type="submit" value="Update" />
+</center>
+
+<p class="j">
+This set of controls select the time and date the image should
+represent.  The default, <a name="Now">&ldquo;Now&rdquo;</a>, is the current time and date.
+You can specify a date in the past or the future (from &minus;4712 [or 4713
+<span class="sc">B.C.</span>] through <span class="sc">A.D.</span> 8000), as either a date and time in Universal
+(Greenwich Mean) Time or by Julian Date.
+</p>
+
+<h3><a name="UTC">Universal Time</a></h3>
+
+<p class="j">
+To specify a date and time in Universal time, check the &ldquo;UTC&rdquo; box and
+enter the date and time in the text field in the form:
+</p>
+
+<center>
+<var>year-month-day hour:minute:second</var>
+</center>
+
+<p class="j">
+If you omit <var>minute</var> or <var>second</var>, they're taken as
+zero.  The entry in the example box above represents 22:00 (10 <span class="sc">P.M.</span>)
+Universal Time on September 17th, 1993, the date of the second approach of the
+&ldquo;triple conjunction&rdquo; between Uranus and Neptune in that year.  Check
+the UTC box and press &ldquo;Update&rdquo; and observe how Earth, Uranus, and
+Neptune lined up at that moment.  Hold a ruler to your monitor and
+note how precise the alignment was.
+</p>
+
+<p class="j">
+If you're entering dates before <span class="sc">A.D.</span> 1, note
+that <cite>Solar System Live</cite> follows the astronomical convention where the
+year historians call 1 <span class="sc">B.C.</span> is denoted
+&ldquo;year 0&rdquo;, 2 <span class="sc">B.C.</span> &ldquo;year
+&minus;1&rdquo;, and so on.  Thus, to  specify the year &ldquo;413
+<span class="sc">B.C.</span>&rdquo; you would use
+&ldquo;&minus;412&rdquo; in the Universal Time box.  See the
+discussion below for more details, including the change-over from the
+Julian to the Gregorian calendar in 1582.
+</p>
+
+<h3><a name="Julian">Julian Days</a></h3>
+
+<p class="j">
+The Gregorian calendar we use today is both exquisitely precise and
+preposterously eccentric.  Astronomers who often work with events with
+great regularity in time need to be able to calculate the difference
+between two dates or when a particular phenomenon will recur in the
+future without checking off boxes on a calendar.  The <dfn>Julian
+day</dfn> system meets these needs.  A Julian date is simply the
+number of days elapsed since the beginning of the year &minus;4712.  Since
+optical astronomers of yore worked mostly by night, and observed
+mostly from Europe, the Julian Day was defined to begin at noon, 12:00
+Universal Time.  This avoided the inconvenience of having an observing
+session begin one day and end the next, as would occur were
+regular civil dates used.
+</p>
+
+<p class="j">
+By starting so far in the past, all historical observations can be
+expressed by positive Julian Day numbers.  Time is expressed by a
+decimal fraction of days.  The Julian Day in the box above, 1719286.5,
+corresponds to midnight, Universal Time, February 25, &minus;5.  Notice how
+the Earth, Mars, Jupiter, and Saturn are close to being along a
+straight line.  Indeed, at this moment, seen from Earth, a rare (not
+to repeat for 800 years) conjunction among Jupiter (traditional king
+of the gods), Saturn (ruling planet of Judah), and Mars, shown like a
+beacon in the Western sky, in the constellation of Pisces the Fish
+(the House of the Hebrews) where the equinox had just entered,
+crossing the border from Aries where it had been since the Greeks.
+Some people believe this was the Star of Bethlehem.  You'll recall
+that the early Christians recognised one another with the sign of a
+fish.
+</p>
+
+<p class="j">
+You can enter any Julian date between 0.5 (January 1, &minus;4712) and
+4346655.5 (December 31, 8000).  For Julian dates for years before
+<span class="sc">A.D.</span> 1, note that astronomers and historians
+use different conventions for those years.  In history books, the year
+that preceded <span class="sc">A.D.</span> 1  is called 1 <span
+class="sc">B.C.</span>; zero not having come into use in European
+culture at the time.  Astronomers consider the year before <span
+class="sc">A.D.</span> 1 as &ldquo;year 0&rdquo;. Thus when an
+astronomer talks about an eclipse having occurred in the year
+&minus;412, that's the year historians refer to as &ldquo;413 <span
+class="sc">B.C.</span>&rdquo;.  In converting Julian days to
+historical dates, Solar System Live assumes the canonical date for the
+<a href="/documents/calendar/IG_Latin.html"
+   target="SolarSystemLiveAux">adoption of the Gregorian calendar</a>,
+Friday, October 15th, 1582.  Many
+countries shifted to the Gregorian calendar much later; in Great
+Britain, not until 1752.  When investigating events in history, make
+sure you express all dates after October 15th, 1582 in the Gregorian
+calendar.
+</p>
+</form>
+
+<p />
+<a href="/solar/solar.html"><b>Return to <cite>Solar System Live</cite></b></a>
+&nbsp; &nbsp;
+<a href="help.html"><b>Other Help</b></a>
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/help/timedate.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>

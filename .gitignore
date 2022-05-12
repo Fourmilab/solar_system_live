@@ -1,0 +1,4 @@
+src/*.o
+src/solar
+src/hostkey_FOURMILAB.h
+src/regress/cache

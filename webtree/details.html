@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Solar System Live Details</title>
+<link rel="stylesheet" href="solar.css" type="text/css" />
+<style type="text/css">
+    dd {
+        text-align: justify;
+    }
+    dt {
+        margin-top: 0.5em;
+        font-weight: bold;
+    }
+</style>
+<meta name="keywords" content="solar, system, live, details, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live Details" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+
+<h1>
+<img src="details.png" align="middle" width="76" height="120" alt="" />
+    &nbsp; Solar System Live Details
+</h1>
+
+<hr />
+
+<dl>
+<dt>How did you <em>do</em> that in
+    <a href="http://www.w3.org/TR/html401/"
+       target="SolarAux">HTML</a>?</dt>
+<dd>The HTML documents form only the skeleton of Solar System
+Live.
+They assemble a request which is sent, using the CGI mechanism, to a
+server application written in C.  The server, given the viewing
+parameters you selected in the HTML file, creates a GIF image of the
+requested view, then returns an HTML document which references the
+GIF file as an in-line image.  Fields in the form of this result
+document are initialised to the parameters passed in with the request.
+To better understand what's going on, view the source of the result of
+a query.  Note that since the source is custom-generated for each
+query, it will be different every time.</dd>
+
+<dt>How do you calculate the positions of the planets?</dt>
+<dd>The heliocentric co-ordinates of Mercury through Neptune are calculated using
+the algorithms given in Jean Meeus'
+<a href="credits.html#astralg"><cite>Astronomical
+Algorithms</cite></a>, based upon the VSOP87 planetary theory of
+Bretagnon and Francou.  The position of Pluto is calculated, for
+dates between 1885 and 2099, using the method given in
+Chapter 36 of <cite>Astronomical Algorithms</cite>.  No analytical
+theory of the orbit of Pluto exists at present, because Pluto has been
+observed over an insufficient portion of its orbit since its
+discovery in 1930 to construct one.</dd>
+
+<dt>How do you calculate the orbits of comets and
+    asteroids?</dt>
+<dd>The specified <a href="help/elements.html">orbital elements</a>
+    are used in conjunction with the general solutions for elliptic and
+    parabolic motion given in Chapters 32 and 33 of
+    <cite>Astronomical Algorithms</cite>.  The orbit is plotted by
+    calculating positions before and after the specified epoch until
+    the orbit either closes (if elliptical) or reaches a preset
+    distance from the Sun (if parabolic).  The time step is calculated
+    based on the rate of motion of the object, smaller near
+    perihelion, larger at aphelion.</dd>
+
+<dt>How do you draw the orbits in the image?</dt>
+<dd>Once the orbit has been calculated, in heliocentric co-ordinates,
+a viewing transform is established, taking into account the
+<a href="help/heliocentric.html">heliocentric viewpoint</a> and
+<a href="help/stereo.html">stereoscopic viewing</a> options.  The
+transform projects the three-dimensional orbit into the pixel space of
+the bitmap.  A 64-sided polygon is drawn to approximate the elliptical
+orbit, using the <a href="/pstampr/README">Postage Stamp
+Rasteriser</a> <a href="/pstampr/">available from this site</a>.</dd>
+
+<dt>What do the numbers in the &ldquo;orbital elements&rdquo; box mean?</dt>
+<dd>Please see the <a href="help/elements.html">help for
+orbital elements</a>.  If you check the &ldquo;Echo elements&rdquo; box, the
+elements will be listed, individually labeled, below the text box.</dd>
+
+<dt><a name="whencePluto">Pluto disappeared!</a>  What's going on?</dt>
+<dd>As mentioned above, Pluto's orbit is not known with sufficient
+accuracy to permit analytic extrapolation beyond the period from 1885
+through 2099, and I'm not about to perform a numerical integration of
+solar system motion, now matter how nicely you
+ask.  So, if you <a href="help/timedate.html">specify a date</a>
+outside that interval, Pluto isn't plotted.</dd>
+
+<dt>Wasn't it a lot of work to build this program?</dt>
+<dd>Actually, only a couple of days; the documentation and on-line
+help took much longer than the program itself.  Like its siblings
+<cite><a href="/earthview/vplanet.html">Earth Viewer</a></cite>
+and <cite><a href="/yoursky/">Your Sky</a></cite>,
+much of Solar System Live is based on code lifted
+directly from <cite><a href="/homeplanet/homeplanet.html">Home
+Planet</a></cite> and, in addition, I was able to <a href="credits.html">stand
+on the shoulders of others</a> who developed freely available
+code or algorithms the program employs; if I've failed to acknowledge
+any contributor, please accept my apologies and let me know of any
+lacunæ so I can properly cite their contributions.
+Home Planet was developed as a title for the Autodesk Science Series,
+to follow <cite><a href="/cellab/">Cellular Automata Lab</a></cite> and <cite>James Gleick's
+CHAOS: The Software</cite>.  When
+<a href="/autofile/www/chapter2_102.html">new management</a> arrived at
+<a href="/autofile/">Autodesk</a>, one of their first actions was to terminate the Science
+Series, along with a <a href="/autofile/www/section2_115_1.html">number
+of other products</a>, some profitable, which did not &ldquo;meet the business
+model&rdquo;.  I obtained the rights to <cite>Home Planet</cite> and decided to place it
+in the public domain.  Since then, in my spare time, I've been mining
+the man-year I invested in its development to build public domain
+Web and Windows tools such as
+<cite><a href="/earthview/vplanet.html">Earth Viewer</a></cite>,
+<cite><a href="/yoursky/">Your Sky</a></cite>, and the
+<cite><a href="/earthscr/">Earth</a></cite> and
+<cite><a href="/skyscrsv">Sky</a></cite> screen savers for Windows.</dd>
+
+</dl>
+
+<p />
+<center>
+<h4>
+<a href="./">Back to <cite>Solar System Live</cite></a> &nbsp; &nbsp;
+<a href="help/help.html">Help</a> &nbsp; &nbsp;
+<a href="credits.html">Credits</a> &nbsp; &nbsp;
+</h4>
+</center>
+
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/details.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>

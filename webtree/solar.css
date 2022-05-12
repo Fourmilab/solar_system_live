@@ -1,0 +1,56 @@
+    .j {
+        text-align: justify;
+    }
+
+    a:link,  a:visited {
+        background-color: inherit;
+        color: rgb(0%, 0%, 80%);
+        text-decoration: none;
+    }
+
+    a:hover  {
+        background-color:  rgb(30%, 30%, 100%);
+        color: rgb(100%, 100%, 100%);
+    }
+
+    a:active {
+        color: rgb(100%, 0%, 0%);
+        background-color:  rgb(30%, 30%, 100%);
+    }
+
+    a.i:link, a.i:visited, a.i:hover {
+        background-color:  inherit;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    body {
+        margin-left: 15%;
+        margin-right: 10%;
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+
+    h4.s {
+        margin-top: 0px;
+    }
+
+    img.l {
+        float: left;
+        margin-right: 8px;
+    }
+
+    p.s {
+        margin-top: 0.3em;
+        margin-bottom: 0px;
+    }
+
+    span.sc {
+        font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
+    textarea.elements {
+        background-color: #FFFFA0;
+        color: #000000;
+    }

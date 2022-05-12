@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+Solar System Live Help: Ephemeris
+</title>
+<link rel="stylesheet" href="../solar.css" type="text/css" />
+<meta name="keywords" content="solar, system, live, help, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live Help: Ephemeris" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+<h1><img src="images/helplogo.png" height="64" width="64" align="middle" alt="" /> &nbsp; Solar System Live Help</h1>
+<hr />
+<h2>Ephemeris</h2>
+<form method="post" action="/cgi-bin/Solar">
+
+<!--  Hidden fields provide canned values that reproduce the
+      sample ephemeris given below. -->
+
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="utc" value="1995/03/01 13:21:56" />
+<input type="hidden" name="sys" value="-Si" />
+<input type="hidden" name="orb" value="-b1" />
+<input type="hidden" name="img" value="-k1" />
+<p />
+<pre>
+<b>              Right                   Distance    From 47°N 7°E:
+            Ascension    Declination      (AU)   Altitude Azimuth</b>
+<b>Sun</b>         22h 47m 56s    -7° 38.1'     0.991    31.233   28.579 Up
+<b>Mercury</b>       21h 4m 4s    -17° 1.2'     0.955    11.661   48.734 Up
+<b>Venus</b>         20h 1m 9s   -19° 29.6'     1.023     0.959   59.516 Up
+<b>Moon</b>        22h 44m 32s    -3° 26.3'   60.3 ER    34.889   31.240 Up
+<b>Mars</b>         9h 21m 36s   +19° 55.0'     0.711   -11.337 -136.424 Set
+<b>Jupiter</b>     16h 50m 39s   -21° 41.0'     5.333   -31.661   91.422 Set
+<b>Saturn</b>       23h 5m 28s    -7° 44.5'    10.653    32.449   23.668 Up
+<b>Uranus</b>       20h 4m 13s   -20° 53.5'    20.430     0.309   58.083 Up
+<b>Neptune</b>     19h 45m 59s   -20° 39.0'    30.855    -2.189   61.544 Set
+<b>Pluto</b>        16h 5m 24s    -6° 54.3'    29.643   -28.449  112.365 Set
+<b>1995 DW1 </b>    12h 3m 42s    +2° 55.2'     0.451   -39.852 -172.924 Set
+</pre>
+
+<p class="j">
+The ephemeris shows you the positions of the principal bodies in the
+Solar System at the <a href="timedate.html">selected time</a>, both in
+celestial coordinates and as seen from your <a href="site.html">specified
+observing site</a>.  If you're tracking an
+asteroid or comet by specifying its <a href="elements.html">orbital
+elements</a>, its position is given at the foot of the table.  The
+sample ephemeris above gives positions for 13:31:56 UTC on March 1,
+1995, while tracking the Earth-orbit-crossing asteroid 1995 DW1, whose
+discovery (on February 25, 1995) was reported in Minor Planet
+Electronic Circular 1995-E02 of 00:15 UTC, March 1, 1995, giving
+the orbital elements shown at the end of this page.
+</p>
+
+<p class="j">
+For each solar system body the following data are displayed:
+The first three items give the equatorial celestial coordinates of the
+object at the specified time, and its distance from the Earth.  These
+values are independent of the observing site.
+</p>
+
+<dl>
+<dt><b>Right ascension</b></dt>
+        <dd class="j">Hour angle at Greenwich.</dd>
+<dt><b>Declination</b></dt>
+        <dd class="j">Declination with regard to the equator.</dd>
+<dt><b>Distance (AU)</b></dt>
+        <dd class="j">Distance from the Earth in astronomical units (the Moon's
+            distance is given in units of the Earth's radius).</dd>
+</dl>
+<p />
+The next three columns give the location of the object in the sky at
+the specified observing site.
+<dl>
+<dt><b>Altitude</b></dt>
+       <dd class="j">Altitude of the body above the horizon, in degrees at the
+           observing site.  If negative, the body is below the horizon (&ldquo;set&rdquo;)
+           and hence invisible.</dd>
+
+<dt><b>Azimuth</b></dt>
+        <dd class="j">Local compass bearing to the object at the observing site.
+            Astronomers measure azimuth from the South
+            (consistent with the convention for hour angle), with positive
+            angles toward the West and negative angles toward the East.</dd>
+
+<dt><b>Visibility</b></dt>
+        <dd class="j">This column interprets the Altitude and Azimuth to describe what
+            you can expect to see.  Objects below the apparent
+            horizon  (taking account of the refraction of the
+            atmosphere and the finite  angular size of the Sun and
+            Moon but not altitude of the observer)  are shown as
+            &ldquo;Set&rdquo; while objects clearly visible in the sky
+            (or  visible if the Sun weren't also up) are shown as
+            &ldquo;Up&rdquo;.  Objects  that are just appearing or
+            disappearing on the horizon are shown  as
+            &ldquo;Rising&rdquo; or &ldquo;Setting&rdquo;, and objects
+            at culmination (crossing the  local meridian) are shown as
+            being in &ldquo;Transit&rdquo;.  Transit times are  quite
+            accurate, but rising and setting times can be given only
+            approximately because the altitude of the observer, local
+            topography along the horizon, and the effects of
+            atmospheric  refraction (which, in turn, vary based upon
+            temperature and  barometric pressure) have a major
+            influence upon when you will  actually see an object
+            appear or disappear at the horizon.</dd>
+</dl>
+
+<p class="j">
+Press the
+<input type="submit" value="Update" />
+button to reproduce the sample ephemeris above, using the following
+orbital elements for asteroid 1995 DW1:
+</p>
+
+<textarea name="elements" class="elements" rows="7" cols="70">
+1995 DW1
+Epoch 1995 Feb. 12.0 TT = JDT 2449760.5                 Marsden
+M 240.56097              (2000.0)            P               Q
+n   0.87220579     Peri.  325.86185     +0.71396325     +0.69743383
+a   1.0849009      Node   349.21340     -0.54541801     +0.49845325
+e   0.5139556      Incl.   19.34279     -0.43906227     +0.51490816
+P   1.13           H    20.5          G   0.15
+</textarea>
+</form>
+
+<p />
+<a href="/solar/solar.html"><b>Return to <cite>Solar System Live</cite></b></a>
+&nbsp; &nbsp;
+<a href="help.html"><b>Other Help</b></a>
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/help/ephemeris.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>

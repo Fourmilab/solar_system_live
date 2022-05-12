@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="http://www.fourmilab.ch/cgi-bin/uncgi/Solar" />
+<title>Solar System Live Orbital Elements Test</title>
+<meta charset="utf-8" />
+<body style="margin-left: 10%; margin-right: 10%;">
+<h1 style="text-align: center;">
+Solar System Live Orbital Elements Test
+</h1>
+<hr />
+
+<p style="text-align: justify;">
+This file exercises the various forms in which asteroid and comet
+orbital elements may be specified to Solar System Live, submitting
+them to the server declared in the <b>&lt;base&gt;</b> tag in the
+document header.
+</p>
+
+<h2>Asteroid: 1 Ceres</h2>
+
+<ul>
+    <li><a href="?date=0&utc=2005-07-21+23%3A10%3A24&jd=2453573.46556&img=-k0&sys=-Si&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=%3DA%2CCERES%201%2C3%2E34%2C0%2E12%2C141%2E46157%2C71%2E115861%2C80%2E676944%2C10%2E600006%2C0%2E0765601%2C2%2E7674389%2C48800"
+    	target="SSL_test">CSV</a></li>
+    <li><a href="?date=0&utc=2005-07-21+23%3A10%3A19&jd=2453573.46550&img=-k0&sys=-Si&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=1+Ceres+53600+2.7659794+0.08001400+10.58604+73.39245+80.40973+86.9543947+3.34+0.12+JPL+26%0D%0A&aim=10&z=1&edump=-xe"
+    	target="SSL_test">JPL</a></li>
+    <li><a href="?date=0&utc=2005-07-22+0%3A21%3A28&jd=2453573.51491&img=-k0&sys=-Si&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=%281%29+Ceres%0D%0AEpoch+2005+Aug.+18.0+TT+%3D+JDT+2453600.5+++++++++++++++++Bowell%0D%0AM++86.95445++++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0An+++0.21425484+++++Peri.+++73.39238+++++-0.88119276+++++-0.43667616%0D%0Aa+++2.7659795++++++Node++++80.40973+++++%2B0.33252234+++++-0.84486336%0D%0Ae+++0.0800141++++++Incl.+++10.58603+++++%2B0.33604792+++++-0.30906285%0D%0AP+++4.60+++++++++++H++++3.34++++++++++G+++0.12%0D%0A"
+    	target="SSL_test">MPEC</a></li>
+</ul>
+
+<h2>Periodic Comet: 2P/Encke</h2>
+
+<ul>
+    <li><a href="?date=0&utc=2005-07-21+22%3A59%3A16&jd=2453573.45782&img=-k0&sys=-Si&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=%3DC%2CP%2FEncke%2C94%2D02%2D09%2C0%2E331%2C0%2E85%2C186%2C335%2C11%2E9%2C2%2E21%20AU%2C3%2E28%20years"
+    	target="SSL_test">CSV</a></li>
+    <li><a href="?date=0&utc=2005-07-21+23%3A10%3A24&jd=2453573.46556&img=-k0&sys=-Si&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=2P%2FEncke+51120+0.33541700+0.84859557+11.86038+186.41178+334.72243+19970523.56424+JPL+J974%2F1%0D%0A"
+    	target="SSL_test">JPL</a></li>
+    <li><a href="?date=0&utc=2005-07-22+0%3A23%3A31&jd=2453573.51633&img=-k0&sys=-Si&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=2P%2FEncke%0D%0AEpoch+2005+Aug.+18.0+TT+%3D+JDT+2453600.5%0D%0AT+2003+Dec.+29.8945+TT++++++++++++++++++++++++++++++++++MPC%0D%0Aq+++0.338844+++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0An+++0.2984276++++++Peri.++186.5134++++++-0.9450768++++++-0.3149233%0D%0Aa+++2.217737+++++++Node+++334.5891++++++%2B0.3083250++++++-0.7701647%0D%0Ae+++0.847212+++++++Incl.+++11.7634++++++%2B0.1084692++++++-0.5546798%0D%0AP+++3.30%0D%0A"
+    	target="SSL_test">MPEC</a></li>
+</ul>
+
+<h2>Parabolic Comet: C/2002 T7 (LINEAR)</h2>
+
+<ul>
+    <li><a href="?date=0&utc=2005-07-22+0%3A35%3A27&jd=2453573.52462&img=-k0&sys=-Sf&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=%3DC%2CC%2F2002+T7+%28LINEAR%29%2C2004-4-23.0509%2C0.613786%2C1.000525%2C157.8291%2C94.9965%2C160.5678%2C%2C%2C+MPC+52164%0D%0A"
+    	target="SSL_test">CSV</a></li>
+    <li><a href="?date=0&utc=2005-07-22+0%3A26%3A32&jd=2453573.51843&img=-k0&sys=-Sf&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=C%2FLINEAR+%282002+T7%29+52937+0.61454093+1.00048184+160.58258+157.73945+94.85645+20040423.06252+JPL+132%0D%0A"
+    	target="SSL_test">JPL</a></li>
+    <li><a href="?date=0&utc=2005-07-22+0%3A32%3A09&jd=2453573.52233&img=-k0&sys=-Sf&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=+C%2F2002+T7+%28LINEAR%29%0D%0AEpoch+2005+Aug.+18.0+TT+%3D+JDT+2453600.5%0D%0AT+2004+Apr.+23.0509+TT++++++++++++++++++++++++++++++++++MPC%0D%0Aq+++0.613786+++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0Az++-0.000856+++++++Peri.++157.8291++++++%2B0.4351768++++++-0.8371242%0D%0A+++++++++++++++++++Node++++94.9965++++++-0.8679199++++++-0.2921468%0D%0Ae+++1.000525+++++++Incl.++160.5678++++++-0.2394498++++++-0.4624644%0D%0A"
+    	target="SSL_test">MPEC</a></li>
+</ul>
+
+<h2>Hyperbolic Comet: C/1980 E1 (Bowell)</h2>
+
+<ul>
+    <li><a href="?date=0&utc=2005-07-22+13%3A58%3A14&jd=2453574.08211&img=-k0&sys=-Sf&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=C%2FBowell+%281980+E1%29+46800+3.37691279+1.05578689+1.66163+135.22580+114.55087+19820310.76192+JPL+2%0D%0A"
+    	target="SSL_test">JPL</a></li>
+    <li><a href="?date=0&utc=2005-07-22+14%3A18%3A39&jd=2453574.09628&img=-k0&sys=-Sf&imgsize=320&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=90%B0&hns=North&hlon=0%B0&edump=-xe&elements=C%2F1980+E1+%28Bowell%29%0D%0AEpoch+1982+Mar.+12.0+TT+%3D+JDT+2445040.5%0D%0AT+1982+Mar.+12.2930+TT++++++++++++++++++++++++++++++++++Marsden%0D%0Aq+++3.363949+++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0Az++-0.017040+++++++Peri.++135.0850++++++-0.3476275++++++%2B0.9372617%0D%0A+%2B%2F-0.000002+++++++Node+++114.5563++++++-0.8682003++++++-0.3111349%0D%0Ae+++1.057322+++++++Incl.++++1.6617++++++-0.3540951++++++-0.1572756%0D%0A"
+    	target="SSL_test">MPEC</a></li>
+</ul>
+
+<h2>Interstellar Object: 'Oumuamua (A/2017 U1)</h2>
+
+<ul>
+    <li><a href="?date=1&utc=2017-09-12+13%3A58%3A14&jd=2453574.08211&img=-k0&sys=-Si&imgsize=640&eyes=0&orb=-b1&lat=47%B0&ns=North&lon=7%B0&ew=East&hlat=15%B0&hns=North&hlon=90%B0&edump=-xe&elements=%27Oumuamua+%28A%2F2017+U1%29++58080+0.255911+1.20113+122.741+241.810+24.5969+20170909.50732+JPL+2%0D%0A"
+    	target="SSL_test">JPL</a></li>
+ </ul>
+
+<h2>Legacy Element Formats</h2>
+
+<ul>
+    <li><a href="?edump=-xe&sys=-Si&orb=-b1&date=1&utc=1995%2F02%2F03+11%3A25%3A24&lat=31%B050%27&ns=North&lon=111%B030%27&ew=West&elements=1995+CR%0D%0AEpoch+1995+Jan.+23.0+TT+%3D+JDT+2449740.5+++++++++++++++++Marsden%0D%0AM+278.01564++++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0An+++1.12812404+++++Peri.++322.49940+++++%2B0.57914789+++++%2B0.81494950%0D%0Aa+++0.9138989++++++Node+++342.85889+++++-0.72954994+++++%2B0.50656337%0D%0Ae+++0.8733235++++++Incl.++++4.10461+++++-0.36379197+++++%2B0.28151531%0D%0AP+++0.87+++++++++++H++++21.5++++++++++G+++0.15%0D%0A"
+    	target="SSL_test">Old MPEC Asteroids (1995 CR)</a></li>
+    <li><a href="?edump=-xe&sys=-So&orb=-b1&date=1&img=-k1&utc=1995%2F02%2F26+11%3A36%3A05&lat=19%B050%27&ns=North&lon=155%B028%27&ew=West&elements=1994+ES2%0D%0AId.+Luu%2C+Jewitt+%281995+observations%29%0D%0AEpoch+1995+Mar.+24.0+TT+%3D+JDT+2449800.5+++++++++++++++++Marsden%0D%0AM+279.23038++++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0An+++0.00316620+++++Peri.+++99.64713+++++-0.26952458+++++%2B0.96296183%0D%0Aa++45.9314859++++++Node+++154.71270+++++-0.89054577+++++-0.24615282%0D%0Ae+++0.1247314++++++Incl.++++1.04784+++++-0.36644881+++++-0.11006049%0D%0AP+311.29+++++++++++H++++7.5+++++++++++G+++0.15+++++++++++U+++6%0D%0A"
+    	target="SSL_test">MPEC Recovered Asteroids (1994 ES2)</a></li>
+    <li><a href="?edump=-xe&sys=-Si&orb=-b1&date=1&img=-k0&utc=1994%2F2%2F1+13%3A04%3A41&lat=31%B050%27&ns=North&lon=111%B030%27&ew=West&elements=++++P%2F1989+T2+%28Helin-Roman-Alu+1%29%0D%0AEpoch+1997+Mar.+13.0+TT+%3D+JDT+2450520.5%0D%0AT+1997+Mar.+26.86970+TT+++++++++++++++++++++++++++++++++Marsden%0D%0Aq+++3.7148037++++++++++++%282000.0%29++++++++++++P+++++++++++++++Q%0D%0An+++0.10302089+++++Peri.++215.07650+++++%2B0.31018748+++++%2B0.93673179%0D%0Aa+++4.5066365++++++Node++++73.47353+++++-0.82897125+++++%2B0.35004696%0D%0Ae+++0.1757037++++++Incl.++++9.74228+++++-0.46539272+++++%2B0.00082426%0D%0AP+++9.57%0D%0A"
+    	target="SSL_test">Old MPEC Periodic Comets (P/1989 T2 Helin-Roman-Alu 1)</a></li>
+    <li><a href="?edump=-xe&sys=-So&orb=-b0&date=1&img=-k0&utc=1994%2F7%2F5+16%3A07%3A09&lat=39%B0%27&ns=South&lon=149%B0%27&ew=East&elements=PERIODIC+COMET+McNAUGHT-HARTLEY+%281994n%29%0D%0A+++++T+%3D+1994+Nov.+11.202+TT++++++++++Peri.+%3D+300.216%0D%0A+++++e+%3D+0.61969++++++++++++++++++++++Node++%3D++38.118+++2000.0%0D%0A+++++q+%3D+2.60969+AU+++++++++++++++++++Incl.+%3D++17.655%0D%0A+++++++a+%3D++6.86205+AU+++++n+%3D+0.054831+++++P+%3D++17.98+years%0D%0A"
+    	target="SSL_test">IAUC Periodic Comets (1994n McNAUGHT-HARTLEY)</a></li>
+    <li><a href="?edump=-xe&sys=-Si&orb=-b1&date=1&img=-k1&stereo=-v&eyes=0&utc=1994%2F12%2F12+23%3A00&lat=42%B022%27&ns=North&lon=71%B006%27&ew=West&hlat=20%B0&hns=North&hlon=30%B0&elements=COMET+MACHHOLZ+%281994r%29%0D%0A+++++Improved+parabolic+orbital+elements+from+MPC+24368%3A%0D%0A%0D%0A+++++T+%3D+1994+Oct.++2.5858+TT+++++++++Peri.+%3D+142.7985%0D%0A++++++++++++++++++++++++++++++++++++++Node++%3D+249.9431++2000.0%0D%0A+++++q+%3D+1.845571+AU++++++++++++++++++Incl.+%3D+101.7434%0D%0A"
+    	target="SSL_test">IAUC Parabolic Comets (1994r MACHHOLZ)</a></li>
+    <li><a href="?edump=-xe&sys=-So&orb=-b1&date=1&img=-k1&utc=1994%2F12%2F12+23%3A00&lat=42%B022%27&ns=North&lon=71%B006%27&ew=West&hlat=20%B0&hns=North&hlon=0%B0&elements=COMET+MACHHOLZ+%281994r%29%0D%0A+++++Improved+parabolic+orbital+elements+from+MPC+24368%3A%0D%0A%0D%0A+++++T+%3D+1994+Oct.++2.5858+TT+++++++++Peri.+%3D+142.7985%0D%0A++++++++++++++++++++++++++++++++++++++Node++%3D+249.9431++2000.0%0D%0A+++++q+%3D+1.845571+AU++++++++++++++++++Incl.+%3D+101.7434"
+    	target="SSL_test">. . . Ecliptic plane view of above</a></li>
+</ul>
+
+</body>
+</html>

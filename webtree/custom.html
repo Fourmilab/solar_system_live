@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+Solar System Live: Custom Request
+</title>
+<link rel="stylesheet" href="solar.css" type="text/css" />
+<meta name="keywords" content="solar, system, live, custom,request, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live: Custom Request" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+
+<h1>Solar System Live: Custom Request</h1>
+<hr />
+
+<p class="j">
+By filling out the form below (presented in the same form as the
+<cite>Solar System Live</cite> control panel) you can make a custom request with
+parameters preset.  Then, after pressing the &ldquo;Update&rdquo; button to
+display the requested image, you can save the result on the &ldquo;Hotlist&rdquo;,
+&ldquo;Bookmark&rdquo;, &ldquo;Favorite&rdquo;,
+or whatever your browser calls it.
+Then you can immediately show a custom <cite>Solar System Live</cite> display just
+by selecting that item.
+</p>
+
+<p class="j">
+This is particularly handy for specifying the latitude and longitude
+of your <a href="help/site.html">observing site</a> so that correct
+altitude and azimuth values are displayed in the <a
+href="help/ephemeris.html">ephemeris</a>, but you can use it to preset
+any parameter given below, including specifying
+<a href="help/elements.html">orbital elements</a> to track a comet or
+asteroid.
+</p>
+
+<p class="j">
+If you're not happy with the result when you press &ldquo;Update&rdquo;, come back
+to this page by pressing &ldquo;Back&rdquo; and adjust the parameters until you
+obtain the desired result, then save the request in your browser's
+hotlist or bookmark table.
+</p>
+
+<form method="get" name="request" action="/cgi-bin/Solar">
+<center>
+<a href="help/timedate.html"><b>Time:</b></a>
+<input type="radio" name="date" value="0" checked="checked" />&nbsp; <a href="help/timedate.html#Now">Now</a>
+<input type="radio" name="date" value="1" />&nbsp;<a href="help/timedate.html#UTC">UTC:</a>
+<input type="text" name="utc" value="2069/07/20 20:17:43" size="20" onchange="document.request.date[1].checked=true;" />
+<input type="radio" name="date" value="2" />&nbsp;<a href="help/timedate.html#Julian">Julian:</a>
+<input type="text" name="jd" value="2476948.34564" size="15" onchange="document.request.date[2].checked=true;" />
+<p class="s" />
+
+<input type="submit" value="Update" />
+<p class="s" />
+
+<a href="help/icons.html"><b>Show:</b></a><label><input type="radio" name="img" value="-k0" checked="checked" />&nbsp;Icons</label>
+<label><input type="radio" name="img" value="-k1" />&nbsp;Images</label>
+<p class="s" />
+
+<a href="help/in-out.html"><b>Display:</b></a><label><input type="radio" name="sys" value="-Sf" checked="checked" />&nbsp;Full&nbsp;system</label>
+<label><input type="radio" name="sys" value="-Si" />&nbsp;Inner&nbsp;system</label>
+&nbsp;
+<input type="checkbox" name="stereo" value="-v" />
+<a href="help/stereo.html"><b>Stereo:</b></a><label><input type="radio" name="eyes" value="0" checked="checked" />&nbsp;Cross</label>
+<label><input type="radio" name="eyes" value="1" />&nbsp;Wall</label>
+<p class="s" />
+
+<a href="help/size.html"><b>Image&nbsp;size:</b></a> <input type="text" name="imgsize" value="320" size="6" />
+&nbsp;
+<input type="checkbox" name="dynimg" value="y" />&nbsp;<a href="#dynreq">Dynamic image request</a>
+<p class="s" />
+
+<a href="help/orbits.html"><b>Orbits:</b></a><label><input type="radio" name="orb" value="-b1" />&nbsp;Real</label>
+<label><input type="radio" name="orb" value="-b0" checked="checked" />&nbsp;Logarithmic</label>
+<label><input type="radio" name="orb" value="-b2" />&nbsp;Equal</label>
+<p class="s" />
+
+<a href="help/site.html"><b>Observing site:</b></a> Lat.
+<input type="text" name="lat" value="47°" size="10" />
+<label><input type="radio" name="ns" value="North" checked="checked" />&nbsp;N</label>
+<label><input type="radio" name="ns" value="South" />&nbsp;S</label>
+
+Long.
+<input type="text" name="lon" value="7°" size="10" />
+<label><input type="radio" name="ew" value="East" checked="checked" />&nbsp;E</label>
+<label><input type="radio" name="ew" value="West" />&nbsp;W</label>
+<p class="s" />
+
+<a href="help/heliocentric.html"><b>Heliocentric:</b></a> Lat. <input type="text" name="hlat" value="90°" size="10" />
+<label><input type="radio" name="hns" value="North" checked="checked" />&nbsp;N</label>
+<label><input type="radio" name="hns" value="South" />&nbsp;S</label>
+
+Long.
+<input type="text" name="hlon" value="0°" size="10" />
+<p class="s" />
+
+<b>To track an asteroid or comet, paste </b>
+<a href="help/elements.html"><b>orbital elements below:</b></a>
+<label><input type="checkbox" name="edump" value="-xe" /> Echo elements</label>
+<br />
+<textarea name="elements" class="elements" rows="8" cols="70">
+</textarea>
+</center>
+</form>
+
+<h2><a name="dynreq">Dynamic Image Requests</a></h2>
+
+<p  class="j">
+Normally, <cite>Solar System Live</cite> generates an HTML page
+containing the requested view as an embedded image along with a
+control panel showing the parameters used to produce the image and
+permitting further requests.  Suppose, instead, you wish to embed a
+custom image from <cite>Solar System Live</cite> in a Web page of your
+own.  To include custom, up-to-date images in a Web page, first use
+the form above to compose a <cite>Dynamic image request</cite> with
+the desired parameters.  Enter the specifics of the image you require
+in the form, then press &ldquo;Update&rdquo; to preview the image. If
+you wish to further refine the image, return to this page with your
+browser's &ldquo;Back&rdquo; button (<em>do not</em> use the
+&ldquo;Update&rdquo; button in the result page, as that won't update
+the fields in the custom request), adjust the parameters, and repeat
+until you obtain the image you're looking for.
+</p>
+
+<p class="j">
+Then, return once again to this form with the &ldquo;Back&rdquo;
+button, check the &ldquo;Dynamic image request&rdquo; box, then press
+the &ldquo;Update&rdquo; button.  You should obtain a page showing
+<em>just</em> the image, without the usual HTML page and control
+panel.  More importantly, the URL or Address field in your browser's
+control panel will show a request which will reproduce the image on
+demand.  You can copy the contents of this field and paste it into an
+<tt>&lt;img&gt;</tt> tag in your page to embed the requested image
+therein.
+</p>
+
+<p class="j">
+The request is <em>dynamic</em> in the sense that every time your
+page is displayed, <cite>Solar System Live</cite> will supply an
+up-to-date image with the given parameters.  (Obviously, this applies
+only if the &ldquo;Now&rdquo; box is checked in the <b>Time:</b> section of
+the form.  If you specify a specific date and time, the image will be
+dynamically generated but invariant.  If you prefer such an image,
+it's kinder on <cite>Solar System Live</cite> and the Internet, not
+to mention much faster for visitors to your page, to simply save the
+image on your computer and embed it in your Web page as a regular
+local image.  Images created by <cite>Solar System Live</cite> are in
+the public domain and may be used in any manner without any
+restrictions whatsoever; a back link is appreciated, but not required.)
+</p>
+
+
+<p />
+<center>
+<h4>
+<a href="./">Back to Solar System Live</a> &nbsp; &nbsp;
+<a href="help/help.html">Help</a> &nbsp; &nbsp;
+</h4>
+</center>
+
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/custom.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>

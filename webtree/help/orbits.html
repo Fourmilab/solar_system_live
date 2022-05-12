@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+Solar System Live Help: Orbits
+</title>
+<link rel="stylesheet" href="../solar.css" type="text/css" />
+<meta name="keywords" content="solar, system, live, help, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live Help: Orbits" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+<h1><img src="images/helplogo.png" height="64" width="64" align="middle" alt="" /> &nbsp; Solar System Live Help</h1>
+<hr />
+
+<h2>Orbit Plotting</h2>
+
+<p class="j">
+The orbits of the planets are not coplanar, and many comets and
+asteroids have highly inclined orbits.  The <em>ecliptic</em> is
+defined as the plane containing the Earth's orbit. With respect to
+that plane, the other orbits are inclined and thus, in the course of
+each revolution the planets rise above and fall below the plane of the
+ecliptic.  The portion of the orbit above the plane of the ecliptic is
+drawn in blue, the portion below in green.  Most planets' orbits are
+only slightly inclined with regard to the ecliptic; notable exceptions
+are Mercury, 7 degrees and Pluto, a whopping 17.2°.
+</p>
+
+<h2>Orbit Scales</h2>
+
+<form method="post" action="/cgi-bin/Solar">
+<center>
+<b>Orbits:</b><label><input type="radio" name="orb" value="-b1" />&nbsp;Real</label>
+<label><input type="radio" name="orb" value="-b0" checked="checked" />&nbsp;Logarithmic</label>
+<label><input type="radio" name="orb" value="-b2" />&nbsp;Equal</label>
+<br />
+<input type="submit" value="Update" />
+</center>
+
+<p class="j">
+Regardless of whether you're viewing just the inner planets or the
+entire solar system, you can choose among three different scales for
+the orbits.  The default, &ldquo;Logarithmic&rdquo;, shows the orbits
+in a logarithmic scale which preserves their relative scale while
+compressing the vast empty space of the outer system.  &ldquo;Real&rdquo; selects
+a true linear scale which shows just how empty the solar system is; in
+Real mode you really can't view the inner and outer system on the same
+display, although specifying a larger <a href="size.html">image size</a> will
+help a little.
+</p>
+
+<p class="j">
+&ldquo;Equal&rdquo; chooses a presentation you may recall from your
+elementary school <cite>Science Is Good</cite> textbook (assuming you're young
+enough to remember elementary school yet old enough to remember when
+Science <em>was</em> Good)&mdash;all the orbits are shown equally spaced from one
+another (with a tip of the hat to the eccentricity of the orbits of
+Mercury, Mars, and Pluto).  The Equal view isn't included entirely for
+nostalgia; it's very useful for viewing the solar system as a whole
+when, for example, you're interested in events such as conjunctions
+(appulses) between Venus and Jupiter.  In Equal view the orbit of any
+asteroid you're tracking will always be plotted between the orbits of
+Mars and Jupiter, regardless of where the actual body orbits in the
+Solar System.
+</p>
+</form>
+
+<p />
+<a href="/solar/solar.html"><b>Return to <cite>Solar System Live</cite></b></a>
+&nbsp; &nbsp;
+<a href="help.html"><b>Other Help</b></a>
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/help/orbits.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>

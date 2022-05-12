@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+Solar System Live Help: Heliocentric Viewpoint
+</title>
+<link rel="stylesheet" href="../solar.css" type="text/css" />
+<meta name="keywords" content="solar, system, live, help, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live Help: Heliocentric Viewpoint" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+<h1><img src="images/helplogo.png" height="64" width="64" align="middle" alt="" /> &nbsp; Solar System Live Help</h1>
+<hr />
+<h2>Heliocentric Viewpoint</h2>
+
+<p class="j">
+You can view the solar system from any three-dimensional vantage point
+to better visualise orbital inclinations.  By default, Solar System
+Live shows a &ldquo;plan view&rdquo; of the solar system&mdash;the
+view from directly above the Sun's North pole (heliocentric latitude
+90° North).  Smaller values in the heliocentric latitude box produce
+more oblique views of the solar system.  Checking the
+&ldquo;South&rdquo; box produces views from below the plane of the
+ecliptic, looking toward the southern hemisphere of the Sun.
+</p>
+
+<p class="j">
+The heliocentric longitude rotates the solar system with
+respect to your viewpoint&mdash;you can, for example, put the Earth in the
+front of an oblique display to see which planets are in conjunction
+and opposition more easily.
+</p>
+
+<p class="j">
+For example, here's a view of the solar system with Halley's comet
+plotted by <a href="elements.html">specifying its orbital elements</a>.
+</p>
+
+<center>
+<img src="images/helio1.png" width="320" height="320" alt="" />
+</center>
+
+<p class="j">
+The viewpoint is the default:
+</p>
+
+<form method="post" action="/cgi-bin/Solar">
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="utc" value="1995/03/03 18:45" />
+<center>
+<b>Heliocentric:</b> Lat.&nbsp;<input type="text" name="hlat" value="90°" size="10" />
+<label><input type="radio" name="hns" value="North" checked="checked" />&nbsp;N</label>
+<label><input type="radio" name="hns" value="South" />&nbsp;S</label>
+Long.&nbsp;<input type="text" name="hlon" value="0°" size="10" />
+<input type="hidden" name="elements" value="COMET P/HALLEY
+     T = 1986 Feb.  9.000 TT          Peri. = 112.000
+     e = 0.97                         Node  =  59.000   2000.0
+     q = 0.587   AU                   Incl. = 162.2" />
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+As described in the help for <a href="orbits.html">Orbit Plotting</a>,
+Halley's Comet's appearing on the green portion of its orbit indicates
+the comet
+is below the plane of the ecliptic (the plane defined by the orbit of
+the Earth).  Pluto, on the other hand, is on the blue portion of its
+orbit, indicating that planet is above the plane of the ecliptic.
+</p>
+
+<p class="j">
+Using the Heliocentric latitude and longitude controls, we can change
+the viewpoint to make this more evident.  First, let's set the longitude
+to &ldquo;turn&rdquo; the solar system so the orbit of Halley's comet points to
+the left.  Setting the longitude to 305° does the trick:
+</p>
+
+<center>
+<img src="images/helio2.png" width="320" height="320" alt="" />
+</center>
+
+<p />
+
+<form method="post" action="/cgi-bin/Solar">
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="utc" value="1995/03/03 18:45" />
+<center>
+<b>Heliocentric:</b> Lat.&nbsp;<input type="text" name="hlat" value="90°" size="10" />
+<label><input type="radio" name="hns" value="North" checked="checked" />&nbsp;N</label>
+<label><input type="radio" name="hns" value="South" />&nbsp;S</label>
+Long.&nbsp;<input type="text" name="hlon" value="305°" size="10" />
+<input type="hidden" name="elements" value="COMET P/HALLEY
+     T = 1986 Feb.  9.000 TT          Peri. = 112.000
+     e = 0.97                         Node  =  59.000   2000.0
+     q = 0.587   AU                   Incl. = 162.2" />
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+This also brings Pluto to a convenient position at the front.
+Now, to show the inclination clearly let's rotate the solar system so
+the ecliptic is edge-on.  To do this, change the heliocentric latitude
+from 90° (above the north pole of the Sun) to 0° (in the plane of the
+ecliptic, looking at the Sun's equator).
+</p>
+
+<center>
+<img src="images/helio3.png" width="320" height="320" alt="" />
+</center>
+<p />
+<form method="post" action="/cgi-bin/Solar">
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="utc" value="1995/03/03 18:45" />
+<center>
+<b>Heliocentric:</b> Lat.&nbsp;<input type="text" name="hlat" value="0°" size="10" />
+<label><input type="radio" name="hns" value="North" checked="checked" />&nbsp;N</label>
+<label><input type="radio" name="hns" value="South" />&nbsp;S</label>
+Long.&nbsp;<input type="text" name="hlon" value="305°" size="10" />
+<input type="hidden" name="elements" value="COMET P/HALLEY
+     T = 1986 Feb.  9.000 TT          Peri. = 112.000
+     e = 0.97                         Node  =  59.000   2000.0
+     q = 0.587   AU                   Incl. = 162.2" />
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+This viewpoint clearly shows the positions, above and below the
+ecliptic, respectively, of Pluto and Halley's Comet.  It's also
+evident from this viewpoint that the other planets orbit very close
+to the plane of the ecliptic.
+</p>
+
+<p class="j">
+Choice of a suitable heliocentric viewpoint, especially in conjunction
+with <a href="stereo.html">stereoscopic viewing</a>, makes it much
+easier to visualise the path through the Solar System of comets with
+highly eccentric and/or inclined orbits.
+</p>
+
+<p />
+<a href="/solar/solar.html"><b>Return to <cite>Solar System Live</cite></b></a>
+&nbsp; &nbsp;
+<a href="help.html"><b>Other Help</b></a>
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/help/heliocentric.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>

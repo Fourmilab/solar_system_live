@@ -1,0 +1,77 @@
+Content-type: text/html
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>
+Solar System Live
+</title>
+</head>
+<body bgcolor="#FFFFFF">
+<h1>Solar System: Sat 2069 Jul 20 20:17</h1>
+<center>
+</center>
+<form method="post" name="request" action="/cgi-bin/Solar">
+<center>
+<p />
+<a href="/solar/help/timedate.html"><b>Time:</b></a><input type="radio" name="date" onclick="0" value="0" />&nbsp;<a href="/solar/help/timedate.html#Now">Now</a>
+<input type="radio" name="date" onclick="0" value="1" />&nbsp;<a href="/solar/help/timedate.html#UTC">UTC:</a>&nbsp;<input type="text" name="utc" value="2069-07-20 20:17:43" size="20" onchange="document.request.date[1].checked=true;" />
+<input type="radio" name="date" onclick="0" value="2" checked="checked" />&nbsp;<a href="/solar/help/timedate.html#Julian">Julian:</a>&nbsp;<input type="text" name="jd" value="2476948.34564" size="15" onchange="document.request.date[2].checked=true;" />
+<br />
+<input type="submit" value="Update" />
+<br />
+<a href="/solar/help/icons.html"><b>Show:</b></a><label><input type="radio" name="img" value="-k0" checked="checked" />&nbsp;Icons</label>
+<label><input type="radio" name="img" value="-k1" />&nbsp;Images</label>
+<br />
+<a href="/solar/help/in-out.html"><b>Display:</b></a><label><input type="radio" name="sys" value="-Sf" checked="checked" />&nbsp;Full&nbsp;system</label>
+<label><input type="radio" name="sys" value="-Si" />&nbsp;Inner&nbsp;system</label>
+<a href="/solar/help/size.html"><b>Size:</b></a> <input type="text" name="imgsize" value="640" size="6" />
+<input type="checkbox" name="stereo" value="-v" /> 
+<a href="/solar/help/stereo.html"><b>Stereo:</b></a><label><input type="radio" name="eyes" value="0" checked="checked" />&nbsp;Cross</label>
+<label><input type="radio" name="eyes" value="1" />&nbsp;Wall</label>
+<br />
+<a href="/solar/help/orbits.html"><b>Orbits:</b></a><label><input type="radio" name="orb" value="-b1" checked="checked" />&nbsp;Real</label>
+<label><input type="radio" name="orb" value="-b0" />&nbsp;Logarithmic</label>
+<label><input type="radio" name="orb" value="-b2" />&nbsp;Equal</label>
+<br />
+<a href="/solar/help/site.html"><b>Observing site:</b></a> Lat.
+<input type="text" name="lat" value="47°" size="10" />&nbsp;<label><input type="radio" name="ns" value="North" checked="checked" />&nbsp;N</label>&nbsp;<label><input type="radio" name="ns" value="South" />&nbsp;S</label>
+Long.
+<input type="text" name="lon" value="7°" size="10" />&nbsp;<label><input type="radio" name="ew" value="East" />&nbsp;E</label>&nbsp;<label><input type="radio" name="ew" value="West" checked="checked" />&nbsp;W</label>
+<br />
+<a href="/solar/help/heliocentric.html"><b>Heliocentric:</b></a> Lat. <input type="text" name="hlat" value="45°" size="10" />&nbsp;<label><input type="radio" name="hns" value="North" checked="checked" />&nbsp;N</label>&nbsp;<label><input type="radio" name="hns" value="South" />&nbsp;S</label>
+Long.
+<input type="text" name="hlon" value="30°" size="10" />
+<br />
+<a href="/solar/help/scheme.html"><b>Colour scheme:</b></a>&nbsp;<select name="scheme" size="1">
+<option value="0" selected="selected">Colour</option>
+<option value="1">Colour on white background</option>
+<option value="2">Black on white background</option>
+<option value="3">White on black background</option>
+<option value="4">Night vision (red)</option>
+</select>
+</center>
+<p />
+<a href="/solar/help/ephemeris.html"><b>Ephemeris:</b></a><pre>
+<b>              Right                   Distance    From 47°N 7°W:
+            Ascension    Declination      (AU)   Altitude Azimuth</b>
+<b>Sun</b>          8h  3m 20s   +20° 24.5'     1.016    -1.325  122.430 Set
+<b>Mercury</b>      9h 24m 36s   +16° 38.3'     1.181     8.453  105.372 Up
+<b>Venus</b>       10h 18m 53s   +12°  7.1'     1.302    14.322   92.516 Up
+<b>Moon</b>         9h 54m 26s    +7° 37.8'   61.5 ER     6.918   93.784 Up
+<b>Mars</b>         2h 23m 12s   +12°  7.7'     1.108   -28.004 -156.810 Set
+<b>Jupiter</b>     23h 34m 42s    -4° 10.3'     4.317   -21.255 -107.617 Set
+<b>Saturn</b>      12h 11m 25s    +1° 15.1'     9.962    24.765   62.648 Up
+<b>Uranus</b>      16h 57m 19s   -22° 41.6'    18.324    18.497  -17.204 Up
+<b>Neptune</b>      6h 39m 53s   +22°  9.3'    30.869   -10.579  139.709 Set
+<b>Pluto</b>        0h 35m 14s   -14°  5.4'    44.992   -38.476 -113.346 Set
+<b>20461 </b>       1h 13m 52s   -12° 57.6'    45.520   -43.360 -124.081 Set
+<b>Dioretsa</b>
+</pre>
+<a href="/solar/help/elements.html"><b>Orbital elements for asteroid or comet:</b></a>  <label><input type="checkbox" name="edump" value="-xe" /> Echo elements</label>
+<br />
+<textarea name="elements" rows="1" cols="70">20461 Dioretsa 51388 24.4459301 0.9027402 160.19391 102.19213 296.97833 359.0956660 13.80 0.15 JPL
+</textarea><br />
+</form>

@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+Solar System Live Help: Asteroid and Comet Tracking
+</title>
+<link rel="stylesheet" href="../solar.css" type="text/css" />
+<meta name="keywords" content="solar, system, live, help, orrery, orbits, asteroid, comet" />
+<meta name="description" content="Solar System Live Help: Asteroid and Comet Tracking" />
+<meta name="author" content="John Walker" />
+<meta name="robots" content="index" />
+</head>
+
+<body>
+<h1><img src="images/helplogo.png" height="64" width="64" align="middle" alt="" /> &nbsp; Solar System Live Help</h1>
+<hr />
+<h2>Asteroid and Comet Tracking</h2>
+
+<p class="j">
+You can plot the orbit and current position of an asteroid (minor
+planet) or comet by pasting its orbital elements into the text box
+provided for that purpose.  The orbital elements, which permit
+calculation of the position of the object for a period of time
+surrounding the <em>Epoch</em> for which they are computed, are entered in the form
+currently published in the International
+Astronomical Union (IAU) and Minor Planet Electronic
+<a href="#IAUC"><cite>Circulars</cite></a>.  Further information on
+these electronic publications, including subscription information, is
+given at the bottom of this page.
+</p>
+
+<h3>Asteroids</h3>
+
+<p class="j">
+The first line in the text box is the name or provisional designation
+of the object, and the lines that follow are the orbital elements as
+published in the <cite>Circular</cite> regarding the object.  If your
+system supports cut-and-paste, you can copy the elements directly from
+the E-mail <cite>Circular</cite> and paste them into the
+elements box.
+</p>
+
+<p class="j">
+For example, here are the elements published in MPEC 1995-C12 of
+February 6th, 1995 announcing the discovery of &ldquo;1995 CR&rdquo;, a
+new extremely rare &ldquo;Aten-type&rdquo; asteroid which orbits the Sun
+in less time than the Earth.  1995 CR, discovered on February 3, 1995
+by R. Jedicke with the 0.9 metre Spacewatch telescope at Steward
+Observatory on Kitt Peak, crosses the orbits of all four inner
+planets.  Press the &ldquo;Update&rdquo; button below the elements to
+plot this asteroid's position at the time of its discovery.
+</p>
+
+<form method="post" action="/cgi-bin/Solar">
+<b>Orbital elements for asteroid or comet:</b>
+<label><input type="checkbox" name="edump" value="-xe" checked="checked" /> Echo elements</label>
+<br />
+<input name="sys" type="hidden" value="-Si" />
+<input name="orb" type="hidden" value="-b1" />
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="utc" value="1995/02/03 11:25:24" />
+<input type="hidden" name="lat" value="31°50'" />
+<input type="hidden" name="ns" value="North" />
+<input type="hidden" name="lon" value="111°30'" />
+<input type="hidden" name="ew" value="West" />
+<textarea name="elements" class="elements" rows="7" cols="70">
+1995 CR
+Epoch 1995 Jan. 23.0 TT = JDT 2449740.5                 Marsden
+M 278.01564              (2000.0)            P               Q
+n   1.12812404     Peri.  322.49940     +0.57914789     +0.81494950
+a   0.9138989      Node   342.85889     -0.72954994     +0.50656337
+e   0.8733235      Incl.    4.10461     -0.36379197     +0.28151531
+P   0.87           H    21.5          G   0.15
+</textarea><br />
+<center>
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+On February 22, 1995, 1995 CR passed within 0.05 astronomical units of
+the Earth, about 7.5 million kilometers: about 20 times the distance
+of the Moon.  Note that we checked the &ldquo;Echo elements&rdquo; box above.
+This causes <cite>Solar System Live</cite> to show the elements it obtained from
+the text box immediately below the box, explaining what each value
+means.  Press &ldquo;Update&rdquo; again, then scroll down to see the echoed
+elements, if you're interested.
+</p>
+
+<h4>Recovered Asteroids and Revised Elements</h4>
+
+<p class="j">
+Elements for recovered asteroids (those re-observed after their
+original discovery at a subsequent favourable apparition) and revised
+elements based upon refinement of an orbit by subsequent observations
+are published in a slightly different form, with an &ldquo;Id.&rdquo; line between
+the object's name and the epoch of the elements.  <cite>Solar System Live</cite>
+accepts this form as a well.
+</p>
+
+<p class="j">
+Here are revised elements for &ldquo;1994 ES2&rdquo;, a <em>transneptunian</em> object
+which orbits entirely outside the orbits of Neptune and Pluto with an
+orbital period of more than 311 years.  These revised elements were
+issued in MPEC 1995-E04 of March 1, 1995 which arrived as I was
+writing the paragraphs above.
+</p>
+
+<p class="j">
+I've pasted the elements into the box below; press the
+&ldquo;Update&rdquo; below it to see the path of this far-flung
+wanderer through the darkness. I've set the <a
+href="timedate.html">time and date</a> to the time of the most recent
+observation cited in the <cite>Circular</cite>, and the <a
+href="site.html">observing site</a> to the latitude and longitude of
+Mauna Kea, Hawaii, in the United States, where the 2.2 metre
+University of Hawaii reflector was used to spot this 24th magnitude
+object.
+</p>
+
+<form method="post" action="/cgi-bin/Solar">
+<br />
+<input name="sys" type="hidden" value="-So" />
+<input name="orb" type="hidden" value="-b1" />
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="img" value="-k1" />
+<input type="hidden" name="utc" value="1995/02/26 11:36:05" />
+<input type="hidden" name="lat" value="19°50'" />
+<input type="hidden" name="ns" value="North" />
+<input type="hidden" name="lon" value="155°28'" />
+<input type="hidden" name="ew" value="West" />
+<textarea name="elements" class="elements" rows="8" cols="70">
+1994 ES2
+Id. Luu, Jewitt (1995 observations)
+Epoch 1995 Mar. 24.0 TT = JDT 2449800.5                 Marsden
+M 279.23038              (2000.0)            P               Q
+n   0.00316620     Peri.   99.64713     -0.26952458     +0.96296183
+a  45.9314859      Node   154.71270     -0.89054577     -0.24615282
+e   0.1247314      Incl.    1.04784     -0.36644881     -0.11006049
+P 311.29           H    7.5           G   0.15           U   6
+</textarea><br />
+<center>
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+Consulting the last line of the <a href="ephemeris.html">ephemeris</a>, we
+note that at the time of the observation, 1994 ES2 shone (if I may dare
+to speak of a 24th magnitude object shining!) at an altitude of more than 72°
+degrees in the pellucid skies with which Mauna Kea is blessed.
+</p>
+
+<h3>Comets</h3>
+
+<p class="j">
+Orbital elements for newly discovered and recovered comets are
+reported in the IAU Circulars.  The format in which the elements are
+given depends upon whether the comet is periodic (has a closed orbit
+around the sun) or parabolic (a comet which appears from deep space
+and leaves the solar system for good after its turn around the Sun, or
+has such a long period that its trajectory isn't measurably different
+from parabolic).
+</p>
+
+<h4>Periodic Comets</h4>
+
+<p class="j">
+Elements for periodic comets are (usually) published in the following
+form, this example taken from IAU Circular No. 6037 of July 25,
+1994, reporting the first reliable orbit determination for comet
+McNaught-Hartley (1994n), discovered on July 6, 1994 by
+M. Hartley with the 1.2 metre U.K. Schmidt telescope at Siding Spring
+Australia.
+</p>
+
+<form method="post" action="/cgi-bin/Solar">
+<input name="sys" type="hidden" value="-So" />
+<input name="orb" type="hidden" value="-b0" />
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="img" value="-k0" />
+<input type="hidden" name="utc" value="1994/7/5 16:07:09" />
+<input type="hidden" name="lat" value="39°'" />
+<input type="hidden" name="ns" value="South" />
+<input type="hidden" name="lon" value="149°'" />
+<input type="hidden" name="ew" value="East" />
+<textarea name="elements" class="elements" rows="5" cols="70">
+PERIODIC COMET McNAUGHT-HARTLEY (1994n)
+     T = 1994 Nov. 11.202 TT          Peri. = 300.216
+     e = 0.61969                      Node  =  38.118   2000.0
+     q = 2.60969 AU                   Incl. =  17.655
+       a =  6.86205 AU     n = 0.054831     P =  17.98 years
+</textarea><br />
+<center>
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+Click the &ldquo;Update&rdquo; button above to see how this comet,
+like many a periodic comet, meanders back and forth around the orbits
+of Jupiter and Saturn, in this case with a period of 18 years.  If you
+want something to bear your name until the end of time (or at least
+until Jupiter or Saturn throw it out of the solar system or into one
+of the planets), discovering a periodic comet is your best bet.
+</p>
+
+<p class="j">
+While the IAU Circulars publish orbital elements for periodic comets
+in the form given above, the Minor Planet Electronic Circulars report
+elements of comets in the same form they use for asteroids, except the
+&ldquo;M&rdquo; entry for mean anomaly is replaced by a
+&ldquo;T&rdquo; entry giving perihelion date.  MPEC 1995-C11, issued
+on February 3, 1995 reported the following elements for periodic comet
+P/1989 T2 (Helin-Roman-Alu 1) as follows:
+</p>
+
+<form method="post" action="/cgi-bin/Solar">
+<input name="sys" type="hidden" value="-Si" />
+<input name="orb" type="hidden" value="-b1" />
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="img" value="-k0" />
+<input type="hidden" name="utc" value="1994/2/1 13:04:41" />
+<input type="hidden" name="lat" value="31°50'" />
+<input type="hidden" name="ns" value="North" />
+<input type="hidden" name="lon" value="111°30'" />
+<input type="hidden" name="ew" value="West" />
+<textarea name="elements" class="elements" rows="8" cols="70">
+    P/1989 T2 (Helin-Roman-Alu 1)
+Epoch 1997 Mar. 13.0 TT = JDT 2450520.5
+T 1997 Mar. 26.86970 TT                                 Marsden
+q   3.7148037            (2000.0)            P               Q
+n   0.10302089     Peri.  215.07650     +0.31018748     +0.93673179
+a   4.5066365      Node    73.47353     -0.82897125     +0.35004696
+e   0.1757037      Incl.    9.74228     -0.46539272     +0.00082426
+P   9.57
+</textarea><br />
+<center>
+<input type="submit" value="Update" />
+</center>
+</form>
+
+<p class="j">
+<cite>Solar System Live</cite> detects these &ldquo;stealth periodic
+comets&rdquo; and handles them correctly, as a click on the
+&ldquo;Update&rdquo; button above will demonstrate.
+</p>
+
+<h4>Parabolic Comets</h4>
+
+<p class="j">
+IAU Circular No. 6113 of December 12, 1994 reported the following
+improved orbital elements for Comet Machholz (1994r):
+</p>
+
+<form method="post" action="/cgi-bin/Solar">
+<input name="sys" type="hidden" value="-Si" />
+<input name="orb" type="hidden" value="-b1" />
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="img" value="-k1" />
+<input type="hidden" name="stereo" value="-v" />
+<input type="hidden" name="eyes" value="0" />
+<input type="hidden" name="utc" value="1994/12/12 23:00" />
+<input type="hidden" name="lat" value="42°22'" />
+<input type="hidden" name="ns" value="North" />
+<input type="hidden" name="lon" value="71°06'" />
+<input type="hidden" name="ew" value="West" />
+<input type="hidden" name="hlat" value="20°" />
+<input type="hidden" name="hns" value="North" />
+<input type="hidden" name="hlon" value="30°" />
+<textarea name="elements" class="elements" rows="6" cols="70">
+COMET MACHHOLZ (1994r)
+     Improved parabolic orbital elements from MPC 24368:
+
+     T = 1994 Oct.  2.5858 TT         Peri. = 142.7985
+                                      Node  = 249.9431  2000.0
+     q = 1.845571 AU                  Incl. = 101.7434
+</textarea><br />
+<center>
+<input type="submit" value="Update" />
+</center>
+
+<p class="j">
+Click on &ldquo;Update&rdquo; to view this comet's once-in-all-eternity tour of
+the inner solar system.  I've taken the liberty of selecting a
+<a href="stereo.html">stereo view</a> so you can better appreciate how
+this comet with inclination of more then 90° streaked in from below
+the ecliptic and departed northbound.  The stereo view pair is, by
+default, arranged for &ldquo;cross-eyed&rdquo; viewing; if you're prefer the
+&ldquo;wall-eyed&rdquo; presentation, please <label>check
+here: <input type="checkbox" name="eyes" value="1" /></label>.
+To see the comet's orbit with respect to the entire Solar
+System, looking in toward the Sun from far beyond Neptune, press the
+button below.
+</p>
+</form>
+
+<form method="post" action="/cgi-bin/Solar">
+<center>
+<input type="submit" value="Big Picture" />
+</center>
+
+<p class="j">
+From this perspective it's clear that the comet arrived from below the
+ecliptic, popped up to northern realms while making its hairpin turn
+around then sun, and was &ldquo;last seen heading southbound on the
+interstellar&rdquo;.
+</p>
+
+<p class="j">
+Note that elements for parabolic comets are in essentially the same
+form as those for (most) periodic comets, with eccentricity omitted
+(since it's always 1.0), and the semimajor axis, mean motion, and
+period dropped since they're meaningless for a parabolic trajectory.
+</p>
+
+<br />
+<input name="sys" type="hidden" value="-So" />
+<input name="orb" type="hidden" value="-b1" />
+<input type="hidden" name="date" value="1" />
+<input type="hidden" name="img" value="-k1" />
+<input type="hidden" name="utc" value="1994/12/12 23:00" />
+<input type="hidden" name="lat" value="42°22'" />
+<input type="hidden" name="ns" value="North" />
+<input type="hidden" name="lon" value="71°06'" />
+<input type="hidden" name="ew" value="West" />
+<input type="hidden" name="hlat" value="20°" />
+<input type="hidden" name="hns" value="North" />
+<input type="hidden" name="hlon" value="0°" />
+<textarea name="elements" class="elements" rows="6" cols="70"
+    style="display: none">
+COMET MACHHOLZ (1994r)
+     Improved parabolic orbital elements from MPC 24368:
+
+     T = 1994 Oct.  2.5858 TT         Peri. = 142.7985
+                                      Node  = 249.9431  2000.0
+     q = 1.845571 AU                  Incl. = 101.7434
+</textarea>
+</form>
+
+<h3><a name="IAUC">IAU Circulars</a></h3>
+
+<p class="j">
+The <a href="http://cfa-www.harvard.edu/iau/services/IAUC.html"
+    target="SolarSystemLiveAux">IAU
+Circulars</a>, published by the
+<a href="http://www.cfa.harvard.edu/iau/cbat.html"
+    target="SolarSystemLiveAux">Central
+Bureau for Astronomical Telegrams</a>,
+provide a means for distributing time-sensitive
+information to observers.  The Circulars announce novæ and supernovæ,
+radio and X-ray transients, newly-discovered and recovered comets.
+Companion <a href="http://cfa-www.harvard.edu/iau/services/MPEC.html"
+    target="SolarSystemLiveAux">Minor
+Planet Electronic Circulars</a>,
+published by the
+<a href="http://www.cfa.harvard.edu/iau/mpc.html"
+    target="SolarSystemLiveAux">Minor Planet Center</a>,
+report asteroid
+discoveries and related information.  IAU Circulars used to be
+delivered by telegram or post, but are now distributed by
+electronic mail.  A subscription costs US$6.00 per month, and includes
+E-mail delivery of Circulars as they are published, and log-in
+privileges to a machine with an archive of Circulars as well as
+asteroidal orbital elements from the Minor Planet Center.
+You can
+<a href="http://cfa-www.harvard.edu/iau/services/Subscriptions.html"
+    target="SolarSystemLiveAux">subscribe to the
+circulars</a> by
+sending a check (In US$) payable to the &ldquo;Central Bureau for
+Astronomical Telegrams&rdquo; to:
+</p>
+
+<blockquote>
+        Central Bureau for Astronomical Telegrams<br />
+        Mail Stop 18<br />
+        Smithsonian Astrophysical Observatory<br />
+        60 Garden Street<br />
+        Cambridge, MA 02138<br />
+        USA<br />
+        <br />
+        Fax: ++1 617 495 7231<br />
+        E-mail: <a href="mailto:iausubs@cfa.harvard.edu">iausubs@cfa.harvard.edu</a>
+</blockquote>
+
+<p class="j">
+For more information, contact the above address.
+</p>
+
+<p />
+<a href="/solar/solar.html"><b>Return to <cite>Solar System Live</cite></b></a>
+&nbsp; &nbsp;
+<a href="help.html"><b>Other Help</b></a>
+<hr />
+<table align="right">
+<tr><td align="center">
+    <a href="http://validator.w3.org/check?uri=http://www.fourmilab.ch/solar/help/elements.html"
+       class="i"
+       target="_blank"><img
+       src="/images/icons/valid-xhtml10.png"
+       alt="Valid XHTML 1.0" height="31" width="88"
+       border="0" /></a>
+</td></tr>
+</table>
+<address>
+by <a href="/">John Walker</a>
+</address>
+</body>
+</html>
